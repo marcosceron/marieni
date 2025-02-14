@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <h4> Deletar o produto? {{produto}}</h4>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <button type="submit" class="btn btn-danger"> Confirmar </button>
+        <a href="{% url 'ver_produto' %}" class="btn btn-success"> Voltar </a>
+
+    </form>
+{% endblock %}

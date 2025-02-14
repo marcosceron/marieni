@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <title>Cadastro</title>
+
+<body>
+    <h1>Cadastrar um novo usuario</h1> 
+    <h5>Preencha os dados corretamente.</h5>
+    <div class="rotulo-formulario">
+        <form id="form-cadastro" action="{% url 'cadastro' %}" method="post">{% csrf_token %}
+        
+        <input type="text" class="form-control" placeholder="Username" name="username">
+        <br>
+        <br>   
+        <input type="text" class="form-control" placeholder="Nome" name="first_name">
+        <br>
+        <br>         
+        <input type="text" class="form-control" placeholder="Sobrenome" name="last_name">
+        <br>
+        <br>   
+        <input type="email" class="form-control" placeholder="Email" name="email">
+        <br>
+        <br>
+        <input type="password" class="form-control" placeholder="Senha" name="senha">
+        <br>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Cadastrar">
+        <br>
+        <br>
+
+        </form>
+</div>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container px-4 px-lg-5"><h2 class="m-0 text-center text-white">  Dentro de alguns minutos, você será nosso cliente. Seja bem vindo(a).</h2></div>
+</footer>
+</body>
+{% endblock %}

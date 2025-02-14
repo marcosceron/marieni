@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<title>login</title>
+
+
+<body>
+    <h1>Login</h1>
+    <h6>Por favor, digite seu nome de usuário e sua senha, já existentes.</h6>
+    <div class="rotulo-formulario"> 
+    <form id="form-login" action="{% url 'login' %}" method="post">{% csrf_token %}
+        {% csrf_token %}
+        <input type="text" class="form-control" placeholder="Username" name="username">
+        <br>
+        <br>         
+        <input type="password" class="form-control" placeholder="Senha" name="senha">
+        <br>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Logar">
+        <br>
+        <br>
+
+
+    </form>
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container px-4 px-lg-5"><h2 class="m-0 text-center text-white"> Faça seu login.</h2></div>
+    </footer>
+</body>
+{% endblock %}

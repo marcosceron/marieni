@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <title>Produzindo</title>
+
+<body>
+    <h2>Você está na produção</h2> 
+    <div class="rotulo-formulario">
+        <form id="form-cadastro" method="post">{% csrf_token %}
+        
+        {{form.as_p}}
+        <input type="submit" class="btn btn-primary" value="Salvar no estoque">
+        </form>
+</div>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container px-4 px-lg-5"><h2 class="m-0 text-center text-white"> Mais uma produção.</h2></div>
+</footer>
+</body>
+{% endblock %}

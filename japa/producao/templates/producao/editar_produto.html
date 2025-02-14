@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <title>Cadastro</title>
+
+<body>
+    
+    
+    <div class="rotulo-formulario">
+        <form id="form-cadastro" method="post">{% csrf_token %}
+        
+        {{form.as_p}}
+        <input type="submit" class="btn btn-primary" value="Cadastrar">
+        </form>
+</div>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container px-4 px-lg-5"><h2 class="m-0 text-center text-white">  Dentro de alguns minutos, você será nosso cliente. Seja bem vindo(a).</h2></div>
+</footer>
+</body>
+{% endblock %}
